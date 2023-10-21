@@ -61,7 +61,7 @@
       <section class="section-hero">
         <div class="hero-div container">
           <h1 class="fontshone">Effective Solutions<br />for Your Business</h1>
-          <button class="button button-position" type="button">
+          <button class="button button-position" type="button" data-modal-open>
             Order Service
           </button>
         </div>
@@ -438,5 +438,24 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <svg class="modal-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" data-modal-close>
+          <circle cx="12" cy="12" r="12" fill="#E7E9FC" />
+          <circle
+            cx="12"
+            cy="12"
+            r="11.5"
+            stroke="black"
+            stroke-opacity="0.1"
+          />
+         <use href="./images/icons.svg#icon-linkedin-1"></use>
+        </svg>
+
+      </div>
+    </div>
+    <!-- Umieść przed zamykającym tagiem body -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
