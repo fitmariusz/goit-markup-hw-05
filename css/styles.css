@@ -25,7 +25,7 @@
     --color-text-socialmedia:#FFFFFF;
 
     --var-translate: cubic-bezier(0.4, 0, 0.2, 1);
-    --var-time-tr: 1s;
+    --var-time-tr: 250ms;
 }
 
 * {
@@ -141,6 +141,19 @@ ol {
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.10);
 }
+
+.modal-icon{
+    position: absolute;
+        right: 32px;
+        top: 32px;
+        width: 8px;
+        height: 8px;
+        flex-shrink: 0;
+        fill: #000000;
+        
+        /* padding: 8px; */
+
+}
 /* modal windows -----   finisch*/
 
 
@@ -198,26 +211,23 @@ ol {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    fill: currentColor;
+    transition-duration: var(--var-time-tr);
+    transition-timing-function: var(--var-translate);
+    transition-property: fill border;
 }
 
 .customers-svg{
     width: 104px;
     height: 56px;
     flex-shrink: 0;
-    fill:currentColor;
-    transition-duration: var(--var-time-tr);
-    transition-timing-function: var(--var-translate);
-    transition-property: fill;
+    
 }
-.customers-svg:focus,
-.customers-svg:hover{
-        fill: var(--color-ressed-state);
-}
+
 .customers-link-flex-grip:focus,
 .customers-link-flex-grip:hover{
     border: 1px solid var(--color-ressed-state);
-    color: var(--color-active-links);
+    fill: var(--color-ressed-state);
 }
 
 .filters-buttons {
@@ -234,6 +244,9 @@ ol {
 
     border-radius: 4px;
     border: 1px solid var(--color-accent, #E7E9FC);
+    transition-duration: var(--var-time-tr);
+        transition-timing-function: var(--var-translate);
+        transition-property: background-color color border box-shadow;
    
 }
 
@@ -332,8 +345,19 @@ ol {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition-duration: var(--var-time-tr);
+    transition-timing-function: var(--var-translate);
+    transition-property: background-color;
 
 }
+.fooster-icon-link:focus {
+    background-color: var(--color-success);
+}
+
+.fooster-icon-link:hover {
+    background-color: var(--color-success);
+}
+
 
 .fooster-icon{
     height: 40px;
@@ -345,18 +369,8 @@ ol {
     width: 24px;
     height: 24px;
     fill:var(--color-light);
-    transition-duration: var(--var-time-tr);
-    transition-timing-function: var(--var-translate);
-    transition-property: background-color;
-
 }
 
-.fooster-icon-link:focus {
-    background-color: var(--color-success);
-}
-.fooster-icon-link:hover {
-    background-color: var(--color-success);
-}
 
 
 .fooster-font{
@@ -481,6 +495,25 @@ ol {
    
 }
 
+.list-font{
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    /* gap: 0.5em; */
+}
+
+.list-marker::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: currentColor;
+    align-items: flex-end;
+    top: 69px;
+    border-radius: 4px;
+
+}
+
 .list-section-one-flex{
     display: flex;
     justify-content: space-between;
@@ -600,13 +633,14 @@ ol {
     overflow: hidden;
 
 }
-.portfolio-image-wrap figcaption{
+.portfolio-image-wrap > figcaption{
     position: absolute;
     inset: 0;
     background-color: var(--color-buttons-background,#F4F4FD);
     translate: 0 100%;
-    /* transition: translate var(--var-translate) var(--var-time-tr); */
-   
+    transition-duration: var(--var-time-tr);
+    transition-timing-function: var(--var-translate);
+    transition-property: translate;
 }
 figcaption{
     color: var(--color-light);
@@ -614,13 +648,14 @@ figcaption{
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px;
-        /* 150% */
-      letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    padding: 40px 32px 40px 32px;
+
 }
 
-.portfolio-image-wrap.figcaption:hover{
-    translate: 0;
+.portfolio-list-link-flex-grid:hover figcaption{
+    translate: 0 0;
 }
 
 
@@ -725,7 +760,19 @@ figcaption{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition-duration: var(--var-time-tr);
+    transition-timing-function: var(--var-translate);
+    transition-property: background-color;
 
+}
+
+.team-icon-link:focus {
+    background-color: var(--color-ressed-state);
+
+}
+
+.team-icon-link:hover {
+    background-color: var(--color-ressed-state);
 }
 
 .team-icon {
@@ -739,20 +786,12 @@ figcaption{
     width: 16px;
     height: 16px;
     fill: var(--color-light);
-    transition-duration: var(--var-time-tr);
-    transition-timing-function: var(--var-translate);
-    transition-property: background-color;
+    
 
 
 }
 
-.team-icon-link:focus{
-    background-color: var(--color-ressed-state);
 
-}
-.team-icon-link:hover{
-    background-color: var(--color-ressed-state);
-}
 
 
 
