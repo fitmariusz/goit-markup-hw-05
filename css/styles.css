@@ -213,7 +213,7 @@ ol {
     justify-content: center;
     fill: currentColor;
     transition: border-color var(--var-time-tr) var(--var-translate),
-    fill var(--var-time-tr) var(--var-translate);
+    color var(--var-time-tr) var(--var-translate);
     
    
 }
@@ -228,7 +228,7 @@ ol {
 .customers-link-flex-grip:focus,
 .customers-link-flex-grip:hover{
     border-color: var(--color-ressed-state);
-    fill: var(--color-ressed-state);
+    color: var(--color-ressed-state);
 }
 
 .filters-buttons {
@@ -496,14 +496,21 @@ ol {
     /* gap: 0.5em; */
 }
 
+.list-marker{
+color: var(--color-ressed-state);
+}
+
 .list-marker::before{
+    
     position: absolute;
-    content: "";
+    content: '';
     width: 100%;
     height: 4px;
+    left: 0;
+    bottom:-1px;
     background-color: currentColor;
     align-items: flex-end;
-    top: 69px;
+    /* top: 69px; */
     border-radius: 4px;
 
 }
