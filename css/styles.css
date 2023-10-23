@@ -25,7 +25,7 @@
     --color-text-socialmedia:#FFFFFF;
 
     --var-translate: cubic-bezier(0.4, 0, 0.2, 1);
-    --var-time-tr: 250ms;
+    --var-time-tr: 2s;
 }
 
 * {
@@ -208,16 +208,14 @@ ol {
     /* background-color: var(--color-light); */
     border-radius: 4px;
     border: 1px solid var(--color-subtle-text);
-    
     display: flex;
     align-items: center;
     justify-content: center;
     fill: currentColor;
-    /* transition-duration: var(--var-time-tr);
-    transition-timing-function: var(--var-translate);
-    transition-property: fill border-color; */
-    transition: fill var(--var-time-tr) var(--var-translate);
-    transition: border-color var(--var-time-tr) var(--var-translate);
+    transition: border-color var(--var-time-tr) var(--var-translate),
+    fill var(--var-time-tr) var(--var-translate);
+    
+   
 }
 
 .customers-svg{
@@ -247,12 +245,11 @@ ol {
 
     border-radius: 4px;
     border: 1px solid var(--color-accent, #E7E9FC);
-    /* transition-duration: var(--var-time-tr);
-        transition-timing-function: var(--var-translate);
-        transition-property: background-color color border-color; */
-    transition: color var(--var-time-tr) var(--var-translate);
-    transition: background-color var(--var-time-tr) var(--var-translate);
-    transition: border-color var(--var-time-tr) var(--var-translate);
+    transition: color var(--var-time-tr) var(--var-translate),
+                background-color var(--var-time-tr) var(--var-translate),
+                border-color var(--var-time-tr) var(--var-translate);
+
+
 }
 
 .filters-buttons:hover,
