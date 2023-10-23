@@ -75,10 +75,10 @@ ol {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    transition-duration: var(--var-time-tr);
+    /* transition-duration: var(--var-time-tr);
     transition-timing-function: var(--var-translate);
-    transition-property: background-color;
-
+    transition-property: background-color; */
+    transition: background-color var(--var-time-tr) var(--var-translate);
 }
 
 .button:hover,
@@ -213,9 +213,11 @@ ol {
     align-items: center;
     justify-content: center;
     fill: currentColor;
-    transition-duration: var(--var-time-tr);
+    /* transition-duration: var(--var-time-tr);
     transition-timing-function: var(--var-translate);
-    transition-property: fill border-color;
+    transition-property: fill border-color; */
+    transition: fill var(--var-time-tr) var(--var-translate);
+    transition: border-color var(--var-time-tr) var(--var-translate);
 }
 
 .customers-svg{
@@ -245,10 +247,12 @@ ol {
 
     border-radius: 4px;
     border: 1px solid var(--color-accent, #E7E9FC);
-    transition-duration: var(--var-time-tr);
+    /* transition-duration: var(--var-time-tr);
         transition-timing-function: var(--var-translate);
-        transition-property: background-color color border-color;
-   
+        transition-property: background-color color border-color; */
+    transition: color var(--var-time-tr) var(--var-translate);
+    transition: background-color var(--var-time-tr) var(--var-translate);
+    transition: border-color var(--var-time-tr) var(--var-translate);
 }
 
 .filters-buttons:hover,
@@ -343,10 +347,8 @@ ol {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition-duration: var(--var-time-tr);
-    transition-timing-function: var(--var-translate);
-    transition-property: background-color;
-
+    transition: background-color var(--var-time-tr) var(--var-translate);
+    
 }
 .fooster-icon-link:focus {
     background-color: var(--color-success);
@@ -434,9 +436,7 @@ ol {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-tel-and-mail);
-    transition-duration: var(--var-time-tr);
-    transition-timing-function: var(--var-translate);
-    transition-property: color;
+    transition: color var(--var-time-tr) var(--var-translate);
 }
 
 .link-font:focus,
@@ -463,9 +463,8 @@ ol {
     letter-spacing: 0.02em;
     color: var(--color-dark);
     padding: 24px 0;
-    transition-duration: var(--var-time-tr);
-    transition-timing-function: var(--var-translate);
-    transition-property: color;
+    transition: color var(--var-time-tr) var(--var-translate);
+
 
 }
 
@@ -636,9 +635,10 @@ ol {
     inset: 0;
     background-color: var(--color-buttons-background,#F4F4FD);
     translate: 0 100%;
-    transition-duration: var(--var-time-tr);
+    /* transition-duration: var(--var-time-tr);
     transition-timing-function: var(--var-translate);
-    transition-property: translate;
+    transition-property: translate; */
+    transition: translate var(--var-time-tr) var(--var-translate);
 }
 figcaption{
     color: var(--color-light);
@@ -758,9 +758,10 @@ figcaption{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition-duration: var(--var-time-tr);
+    /* transition-duration: var(--var-time-tr);
     transition-timing-function: var(--var-translate);
-    transition-property: background-color;
+    transition-property: background-color; */
+    transition: background-color var(--var-time-tr) var(--var-translate);
 
 }
 
