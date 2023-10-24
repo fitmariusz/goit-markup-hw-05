@@ -176,6 +176,7 @@ ol {
 
 .modal-icon{
         display: block;
+        fill: none;
         transition: fill var(--var-time-tr) var(--var-translate);
 
 }
@@ -540,6 +541,7 @@ color: var(--color-ressed-state);
     height: 4px;
     left: 0;
     bottom:-1px;
+    border-radius: 2px;
     background-color: currentColor;
     align-items: flex-end;
     /* top: 69px; */
