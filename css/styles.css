@@ -272,12 +272,13 @@ ol {
     text-align: center;
     cursor: pointer;
     padding: 12px 24px;
-
+    box-shadow: none;
     border-radius: 4px;
     border: 1px solid var(--color-accent, #E7E9FC);
     transition: color var(--var-time-tr) var(--var-translate),
                 background-color var(--var-time-tr) var(--var-translate),
-                border-color var(--var-time-tr) var(--var-translate);
+                border-color var(--var-time-tr) var(--var-translate),
+                box-shadow var(--var-time-tr) var(--var-translate);
 
 
 }
@@ -288,6 +289,7 @@ ol {
     color: var(--color-buttons-text);
     background-color: var(--color-active-buttons-background);
     border-color: transparent;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .filters-flex{
@@ -629,6 +631,7 @@ color: var(--color-ressed-state);
 .portfolio-list-link-flex-grid{
     text-decoration: none;
     display: block;
+    transition: box-shadow var(--var-time-tr) var(--var-translate);
     
 }
 .portfolio-list-link-div-flex-grid{
@@ -664,29 +667,29 @@ color: var(--color-ressed-state);
     overflow: hidden;
 
 }
-.portfolio-image-wrap > figcaption{
+.portfolio-image-wrap-p{
     position: absolute;
-    inset: 0;
-    background-color: var(--color-buttons-background,#F4F4FD);
+    top: 0;
+    color: var(--color-light, #F4F4FD);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02px;
+    padding: 40px 32px 40px 32px;
+    height: 100%;
+    width: 100%;
+    /* inset: 0; */
+    background-color: var(--color-buttons-background,#4D5AE5);
     translate: 0 100%;
     /* transition-duration: var(--var-time-tr);
     transition-timing-function: var(--var-translate);
     transition-property: translate; */
     transition: translate var(--var-time-tr) var(--var-translate);
 }
-figcaption{
-    color: var(--color-light);
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.32px;
-    padding: 40px 32px 40px 32px;
 
-}
 
-.portfolio-list-link-flex-grid:hover figcaption{
+.portfolio-list-link-flex-grid:hover p{
     translate: 0;
 }
 
