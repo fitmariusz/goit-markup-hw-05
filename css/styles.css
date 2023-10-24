@@ -545,8 +545,6 @@ color: var(--color-ressed-state);
     background-color: currentColor;
     align-items: flex-end;
     /* top: 69px; */
-    border-radius: 4px;
-
 }
 
 .list-section-one-flex{
