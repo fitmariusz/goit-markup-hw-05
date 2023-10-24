@@ -695,7 +695,9 @@ color: var(--color-ressed-state);
 .portfolio-list-link-flex-grid:hover p{
     transform: translateY(0%);
 }
-
+.portfolio-list-link-flex-grid:focus p {
+    transform: translateY(0%);
+}
 
 .section-hero {
     margin: auto;
