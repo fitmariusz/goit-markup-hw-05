@@ -25,7 +25,7 @@
     --color-text-socialmedia:#FFFFFF;
 
     --var-translate: cubic-bezier(0.4, 0, 0.2, 1);
-    --var-time-tr: 250ms;
+    --var-time-tr: 2s;
 }
 
 * {
@@ -86,6 +86,7 @@ ol {
     cursor: pointer;
     background-color: var(--color-active-buttons-background);
 }
+
 .button-position{
     display: block;
     min-width: 169px;
@@ -110,27 +111,55 @@ ol {
 
 }
 
-.backdrop{
+.modal-backdrop{
 
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(46, 47, 66, 0.4);
 }
 
 .modal{
     position: absolute;
     top: 50%;
     left: 50%;
+    min-height: 584px;
+    border-radius: 4px;
     transform: translate(-50%, -50%);
      width: 408px;
     height: 584px;
     flex-shrink: 0; 
-    background-color: var(--color-white-background);
+    background-color: var(--color-modal-background);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: opacity var(--var-time-tr) var(--var-translate), visibility var(--var-time-tr) var(--var-translate);
 }
-.modal-svg{
+.modal-button{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-accent, #E7E9FC);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    height: 24px;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    transition: background-color var(--var-time-tr) var(--var-translate), border var(--var-time-tr) var(--var-translate);
+    width: 24px;
+   
+    
+}
+
+.modal-button:focus,
+.modal-button:hover{
+    background-color: var(--color-active-links);
+    border: none;
+}
+/* .modal-svg{
     position: absolute;
     right: 24px;
     top: 24px;
@@ -140,19 +169,23 @@ ol {
     fill: var(--color-accent, #E7E9FC);
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.10);
-}
+} */
 
 .modal-icon{
-    position: absolute;
-        right: 32px;
-        top: 32px;
-        width: 8px;
+        display: block;
+        /* width: 8px;
         height: 8px;
         flex-shrink: 0;
-        fill: #000000;
+        fill: #000000; */
+        transition: fill var(--var-time-tr) var(--var-translate);
         
         /* padding: 8px; */
 
+}
+
+.modal-icon:focus,
+.modal-icon:hover{
+    fill: var(--color-white-background);
 }
 /* modal windows -----   finisch*/
 
