@@ -25,7 +25,7 @@
     --color-text-socialmedia:#FFFFFF;
 
     --var-translate: cubic-bezier(0.4, 0, 0.2, 1);
-    --var-time-tr: 2s;
+    --var-time-tr: 250ms;
 }
 
 * {
@@ -173,13 +173,7 @@ ol {
 
 .modal-icon{
         display: block;
-        /* width: 8px;
-        height: 8px;
-        flex-shrink: 0;
-        fill: #000000; */
         transition: fill var(--var-time-tr) var(--var-translate);
-        
-        /* padding: 8px; */
 
 }
 
