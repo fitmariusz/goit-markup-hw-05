@@ -102,90 +102,6 @@ ol {
 }
 
 
-/* modal windows -----   Start */
-
-.is-hidden{
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-}
-
-.modal-backdrop{
-
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(46, 47, 66, 0.4);
-    transition: opacity var(--var-time-tr) var(--var-translate), visibility var(--var-time-tr) var(--var-translate);
-}
-
-.modal{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-height: 584px;
-    border-radius: 4px;
-    transform: translate(-50%, -50%);
-     width: 408px;
-    height: 584px;
-    flex-shrink: 0; 
-    background-color: var(--color-modal-background);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: transform var(--var-time-tr) var(--var-translate);
-}
-.modal-button{
-    display: flex;
-    align-items: center;
-    background-color: var(--color-accent, #E7E9FC);
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    height: 24px;
-    justify-content: center;
-    padding: 0;
-    position: absolute;
-    right: 24px;
-    top: 24px;
-    transition: background-color var(--var-time-tr) var(--var-translate), border var(--var-time-tr) var(--var-translate);
-    width: 24px;
-   
-    
-}
-
-.modal-button:focus,
-.modal-button:hover{
-    background-color: var(--color-active-links);
-    border: none;
-    fill: var(--color-white-background);
-}
-/* .modal-svg{
-    position: absolute;
-    right: 24px;
-    top: 24px;
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-    fill: var(--color-accent, #E7E9FC);
-    stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.10);
-    fill: var(--color-white-background);
-} */
-
-.modal-icon{
-        display: block;
-        fill: none;
-        transition: fill var(--var-time-tr) var(--var-translate);
-
-}
-
-/* .modal-icon:focus,
-.modal-icon:hover{
-    fill: var(--color-white-background);
-} */
-/* modal windows -----   finisch*/
 
 
 
@@ -445,6 +361,14 @@ ol {
     transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg)
     skew(40deg, 40deg);
 }
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+
 .li-what-we-use {
     font-size: 16px;
     line-height: 1.5;
@@ -587,7 +511,86 @@ color: var(--color-ressed-state);
         gap: 40px;
 }
 
+/* modal windows -----   Start */
 
+
+.modal-backdrop {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity var(--var-time-tr) var(--var-translate), visibility var(--var-time-tr) var(--var-translate);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 584px;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    height: 584px;
+    flex-shrink: 0;
+    background-color: var(--color-modal-background);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform var(--var-time-tr) var(--var-translate);
+}
+
+.modal-button {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-accent, #E7E9FC);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    height: 24px;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    transition: background-color var(--var-time-tr) var(--var-translate), border var(--var-time-tr) var(--var-translate);
+    width: 24px;
+
+
+}
+
+.modal-button:focus,
+.modal-button:hover {
+    background-color: var(--color-active-links);
+    border: none;
+    fill: #FFFFFF;
+}
+
+/* .modal-svg{
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    fill: var(--color-accent, #E7E9FC);
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.10);
+    fill: var(--color-white-background);
+} */
+
+.modal-icon {
+    display: block;
+
+    transition: fill var(--var-time-tr) var(--var-translate);
+
+}
+
+/* .modal-icon:focus,
+.modal-icon:hover{
+    fill: var(--color-white-background);
+} */
+/* modal windows -----   finisch*/
 .navi-div{
     display: inline-flex;
     align-items: center;
@@ -690,7 +693,7 @@ color: var(--color-ressed-state);
 
 
 .portfolio-list-link-flex-grid:hover p{
-    translate: 0;
+    transform: translateY(0%);
 }
 
 
@@ -826,9 +829,6 @@ color: var(--color-ressed-state);
 
 
 }
-
-
-
 
 
 
