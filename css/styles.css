@@ -158,6 +158,7 @@ ol {
 .modal-button:hover{
     background-color: var(--color-active-links);
     border: none;
+    fill: var(--color-white-background);
 }
 /* .modal-svg{
     position: absolute;
@@ -169,18 +170,20 @@ ol {
     fill: var(--color-accent, #E7E9FC);
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.10);
+    fill: var(--color-white-background);
 } */
 
 .modal-icon{
         display: block;
+        fill: none;
         transition: fill var(--var-time-tr) var(--var-translate);
 
 }
 
-.modal-icon:focus,
+/* .modal-icon:focus,
 .modal-icon:hover{
     fill: var(--color-white-background);
-}
+} */
 /* modal windows -----   finisch*/
 
 
